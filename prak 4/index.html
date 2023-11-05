@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program Menghitung Jumlah Ganjil Genap</title>
+</head>
+<body>
+
+<script>
+    function FungsiGenap(input){
+        let genap = 0;
+        for (let i=1; i<=input; i++){
+            if (i % 2 == 0){
+                genap++;
+            }
+        }
+        return genap;
+    }
+
+    function FungsiGanjil(input){
+        let ganjil = 0;
+        for (let i=1; i<=input; i++){
+            if (i%2 != 0){
+                ganjil++;
+            }
+        }
+        return ganjil;
+    }
+
+    while (pilih = true){
+
+        let input = prompt("Masukkan Angka : ");
+        if(isNaN(input)){
+            alert ("Masukan Salah " + '"' + input + '"'+ " Bukan Termasuk Bilangan")
+        } else {
+            let genap = FungsiGenap(input);
+            let ganjil = FungsiGanjil(input);
+
+            alert ("Jumlah Bilangan Ganjil : " + ganjil + "\n Jumlah Bilangan Genap : " + genap );
+
+            let perulangan = prompt("Apakah ingin mengulang perhitungan? (Y/N)");
+                if (perulangan == "Y" || perulangan == "y"){
+                pilih == true;
+                }else if (perulangan == "N" || perulangan == "n"){
+                alert ("Program Perhitungan Banyak Jumlah Ganjil dan Genap Selesai ");
+                break;
+                } else {
+                alert ("Pilihan Masukan Salah!!!");
+            }
+        }
+    } 
+    
+
+</script>
+</body>
+</html> 
